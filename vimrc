@@ -69,7 +69,10 @@ autocmd FileType python set et sta ts=4 sw=4
 "Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-colorscheme darkblue
+set t_Co=256
+"colorscheme darkblue
+"colorscheme termcolor
+colorscheme molokai
 
 
 
@@ -142,6 +145,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'c.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
