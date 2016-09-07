@@ -28,11 +28,6 @@ export LS_COLORS='di=00;36'
 #cmd line prompt
 export PS1='\e[32m[\u@\w]$ '
 
-
-export GTK_IM_MODULE=fcitx  
-export QT_IM_MODULE=fcitx  
-export XMODIFIERS="@im=fcitx"
-
 #path
 export PATH="~/bin/:$PATH"
 
