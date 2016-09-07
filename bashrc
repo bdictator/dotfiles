@@ -9,10 +9,10 @@ fi
 
 
 
-
 #aliasssss
 alias c='clear'
 alias h='history'
+alias ls='ls --color=auto'
 alias ll='ls -hl'
 alias la='ls -a'
 alias l='ls -lh'
@@ -25,9 +25,6 @@ alias grep='grep --color=auto'
 #ls output color
 export LS_COLORS='di=00;36'
 
-
-
-
 #cmd line prompt
 export PS1='\e[32m[\u@\w]$ '
 
@@ -39,17 +36,11 @@ export XMODIFIERS="@im=fcitx"
 #path
 export PATH="~/bin/:$PATH"
 
-#hexo blog
-# export NVM_DIR="/home/bdictator/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# nvm use 0.12
-
-
 #default editor
 export EDITOR=/usr/bin/vim
 
-#config for golang
-export GOROOT="$HOME/Softs/Go"
-export PATH="$PATH:$GOROOT/bin/"
-export GOPATH="$HOME/Dev/Go"
+function cd()
+{
+    command cd ${1} && ls
+}
 
