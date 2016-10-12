@@ -58,21 +58,14 @@ autocmd FileType python set et sta ts=4 sw=4
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Code Fold
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"enable fold
-"set foldmethod=syntax
-"use space to toggle fold
-"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo') <CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 set t_Co=256
 "colorscheme darkblue
-"colorscheme termcolor
-colorscheme molokai
+colorscheme termcolor
+"colorscheme molokai
+"colorscheme Tomorrow-Night-Bright
 
 
 
@@ -93,9 +86,6 @@ set incsearch
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "always have a status line
 set laststatus=2
-
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-"set statusline=%F%w\ [FORMAT=%{&ff}]\ [%p%%]\ [LEN=%L]
 
 "allow displaying incomplete line
 set display=lastline
@@ -130,7 +120,14 @@ nnoremap tc :tabclose<CR>
 nnoremap gf <C-W>gf
 
 "ctrl+n open nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
+
+"nerdcommenter ,cc ,cu ,ci ,cm
+
+"Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,7 +142,16 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'c.vim'
+Plugin 'ctrlp.vim'
+
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ternjs/tern_for_vim.git'
+Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
