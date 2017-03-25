@@ -11,7 +11,6 @@ set number
 
 "use hard tabs
 set tabstop=4
-set noexpandtab
 set shiftwidth=4
 set expandtab
 set smarttab
