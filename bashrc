@@ -39,3 +39,4 @@ function cd()
     command cd ${1} && ls
 }
 
+bind 'set completion-ignore-case on'
